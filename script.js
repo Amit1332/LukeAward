@@ -79,7 +79,7 @@ document.querySelectorAll(".imgEffect").forEach(element => {
 // BLACK CIRCLE
 
 blcircle.addEventListener("mousemove",function(dets){
-    blcircle.style.transform=`translate(${dets.clientX*.22}px,${dets.clientY*.099}px)`
+    blcircle.style.transform=`translate(${dets.clientX*.32}px,${-dets.clientY*.04}px)`
 })
 blcircle.addEventListener("mouseleave",function(dets){
     blcircle.style.transform=`translate(0,0)`
@@ -156,6 +156,33 @@ gsap.to(".start",{
     height:0,
     duration:2,
     delay:1
+    
+})
+
+
+document.querySelector(".ri-arrow-up-circle-line").addEventListener("click",function(){
+    window.scrollTo({
+       top:0,
+       behavior:"smooth" 
+    })
+    setTimeout(() => {
+        document.querySelector(".ri-arrow-up-circle-line").style.display="none"
+        document.querySelector(".ri-arrow-down-circle-line").style.display="block"
+
+    }, );
+    
+})
+document.querySelector(".ri-arrow-down-circle-line").addEventListener("click",function(){
+    window.scrollTo({
+       top:"10000",
+       behavior:"smooth",
+        
+    })
+    setTimeout(() => {
+        document.querySelector(".ri-arrow-up-circle-line").style.display="block"
+        document.querySelector(".ri-arrow-down-circle-line").style.display="none"
+    }, );
+    
     
 })
 

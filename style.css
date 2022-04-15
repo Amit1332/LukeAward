@@ -171,13 +171,13 @@ body {
 }
 
 .main .content {
-  display: inline-block;
+  /* display: inline-block; */
   padding: 0px 100px;
   position: relative;
   overflow: hidden;
 }
 .content h1 {
-  font-size: 250px;
+  font-size: 15vw;
   text-transform: uppercase;
   font-family: "vanguard CF";
 }
@@ -185,9 +185,18 @@ body {
   display: inline-block;
   line-height: 230px;
 }
+@media(max-width:900px) {
+  .heading {
+line-height: 100px;
+  }
+  .content p {
+    right: 2%;
+    
+  }
+}
 .content p {
   position: absolute;
-  right: -0%;
+  right: 10%;
   bottom: 0;
   font-size: 13px;
   font-weight: 500;
@@ -258,6 +267,7 @@ body {
   justify-content: center;
   font-size: 15px;
   font-family: sans-serif;
+  transition: all .5s ease-out;
 }
 .contact h1 {
   font-size: 90px;
@@ -306,7 +316,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0px 100px;
-  margin-bottom: 30px;
+  padding-bottom: 20px;
 }
 .footer h1 {
   font-family: sans-serif;
@@ -316,4 +326,32 @@ body {
   color: #605f5f;
   font-family: "Hursheys";
   font-weight: 100;
+}
+
+.scroll{
+  position: fixed;
+  right: 100px;
+  bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ flex-direction: column;
+ height: 200px; 
+ width: 100px;
+ 
+ 
+ /* background-color: red; */
+}
+.scroll i{
+  font-size: 50px;
+  color: crimson;
+  transition: all .2s ease-out;
+
+}
+.scroll i:hover{
+  font-size: 100px;
+  transition: all .2s ease-out;
+}
+.ri-arrow-up-circle-line{
+  display: none;
 }
